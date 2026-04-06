@@ -17,21 +17,49 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Compile",
+  title: "Compile | Sigorta Yazılım Çözümleri",
   description:
-    "End-to-end insurance platforms. TSS, ÖSS, pharmacy, DAP & self-service.",
+    "Compile, sigorta sektörüne özel yazılım çözümleri geliştiren 20 yıllık deneyimli bir teknoloji şirketidir. Provizyon sistemleri, anlaşmalı kurum yönetimi, e-fatura entegrasyonu ve daha fazlası.",
+  keywords: [
+    "sigorta yazılımı",
+    "provizyon sistemi",
+    "anlaşmalı kurum yönetimi",
+    "e-fatura entegrasyonu",
+    "sigorta teknolojisi",
+    "insurance software",
+    "health insurance platform",
+  ],
+  authors: [{ name: "Compile" }],
+  openGraph: {
+    title: "Compile | Sigorta Yazılım Çözümleri",
+    description:
+      "Sigorta sektörüne özel provizyon, e-fatura, anlaşmalı kurum yönetimi ve daha fazlası.",
+    url: "https://compile.com.tr",
+    siteName: "Compile",
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compile | Sigorta Yazılım Çözümleri",
+    description:
+      "Sigorta sektörüne özel provizyon, e-fatura, anlaşmalı kurum yönetimi ve daha fazlası.",
+  },
   icons: {
     icon: "/favicon.ico",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body
         className={`${playfair.variable} ${jakarta.variable}`}
         suppressHydrationWarning
