@@ -1,0 +1,69 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.left {
+  padding-right: 16px;
+}
+
+.p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vi {
+  background: #fff;
+  border: 1px solid rgba(26, 22, 18, 0.12);
+  border-radius: 16px;
+  padding: 22px 24px;
+  transition:
+    border-color 0.25s,
+    transform 0.25s;
+}
+.vi:hover {
+  border-color: var(--bdo);
+  transform: translateX(6px);
+}
+
+.viRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.viTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.viIco {
+  font-size: 18px;
+}
+.viDesc {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    padding-right: 0;
+  }
+}

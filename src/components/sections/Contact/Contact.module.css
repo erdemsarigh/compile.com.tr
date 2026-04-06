@@ -1,0 +1,126 @@
+.sec {
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  padding: 112px 56px;
+}
+
+.orb1 {
+  position: absolute;
+  left: -160px;
+  top: -160px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 84, 26, 0.22) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.orb2 {
+  position: absolute;
+  right: -120px;
+  bottom: -100px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 84, 26, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--org2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.line {
+  width: 24px;
+  height: 1px;
+  background: var(--org2);
+}
+
+.h {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 900;
+  color: var(--cream);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.em {
+  font-style: italic;
+  color: var(--org2);
+}
+
+.sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(250, 248, 244, 0.55);
+  line-height: 1.72;
+  margin-bottom: 48px;
+}
+
+
+.cl {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(250, 248, 244, 0.06);
+  border: 1px solid rgba(250, 248, 244, 0.1);
+  border-radius: 16px;
+  padding: 18px 26px;
+  text-decoration: none;
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 500;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.25s;
+  text-align: left;
+}
+
+.cl:hover {
+  background: rgba(212, 84, 26, 0.18);
+  border-color: rgba(212, 84, 26, 0.35);
+  transform: translateX(6px);
+}
+.ico {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.arr {
+  margin-left: auto;
+  color: var(--org2);
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+.cl:hover .arr {
+  transform: translateX(4px);
+}
+
+@media (max-width: 700px) {
+  .sec {
+    padding: 80px 24px;
+  }
+}
