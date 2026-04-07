@@ -17,6 +17,10 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://compile.com.tr"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Compile | Sigorta Yazılım Çözümleri",
   description:
     "Compile, sigorta sektörüne özel yazılım çözümleri geliştiren 20 yıllık deneyimli bir teknoloji şirketidir. Provizyon sistemleri, anlaşmalı kurum yönetimi, e-fatura entegrasyonu ve daha fazlası.",
@@ -38,6 +42,14 @@ export const metadata: Metadata = {
     siteName: "Compile",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Compile - Sigorta Yazılım Çözümleri",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -61,6 +73,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Compile",
+              url: "https://compile.com.tr",
+              description:
+                "Sigorta sektörüne özel yazılım çözümleri geliştiren teknoloji şirketi.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                areaServed: "TR",
+                availableLanguage: "Turkish",
+              },
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${playfair.variable} ${jakarta.variable}`}
         suppressHydrationWarning
