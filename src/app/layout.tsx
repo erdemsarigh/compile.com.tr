@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/context/LangContext";
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -72,9 +73,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
-        <script
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L1JXWJ0KDK"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L1JXWJ0KDK');
+        `}
+        </Script>
+        <Script
           id="json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
